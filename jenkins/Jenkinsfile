@@ -30,6 +30,8 @@ pipeline {
             agent {
                 docker {
                     image 'cdrx/pyinstaller-linux:python2'
+                    args '--entrypoint='
+                    args '-u root --privileged'
                 }
             }
             steps {
